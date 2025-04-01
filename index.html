@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya's Profile</title>
+    <link rel="icon" href="logo 1.jpg">
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+        }
+        header {
+            padding: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            color: #00bcd4;
+            animation: fadeIn 2s;
+        }
+        section {
+            margin: 40px auto;
+            width: 80%;
+            padding: 20px;
+            background: #1e1e1e;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 188, 212, 0.3);
+            animation: slideUp 1.5s ease-in-out;
+        }
+        h2 {
+            color: #ff9800;
+        }
+        p {
+            color: #cfd8dc;
+            font-size: 18px;
+        }
+        img {
+            width: 150px;
+            border-radius: 10px;
+        }
+        .skills-box, .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        .skill, .contact-links a {
+            background: #2a2a2a;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s, background 0.3s;
+            color: #00bcd4;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .skill img, .contact-links img {
+            width: 30px;
+            height: 30px;
+        }
+        .skill:hover, .contact-links a:hover {
+            transform: scale(1.1);
+            background: #00bcd4;
+            color: #121212;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+        }
+        .popup input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        .popup button {
+            background: #00bcd4;
+            color: #121212;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;}
+    </style>
+
+<script>
+    function showPopup() {
+        document.getElementById('loginPopup').style.display = 'block';
+    }
+    function checkPassword() {
+        var password = document.getElementById('password');
+        if (password.value === '1212') {
+            window.open('document.html/doument.html', '_blank');
+            password.value = "";
+            document.getElementById('loginPopup').style.display = 'none';
+        } else {
+            alert('Incorrect password!');
+        }
+    }
+    document.addEventListener("DOMContentLoaded", function() {
+        var passwordInput = document.getElementById("password");
+        passwordInput.addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                checkPassword();
+            }
+        });
+    });
+</script>
+
+
+
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Profile</h1>
+        <p>"Innovation | Gaming | learning | Be a good one | எண்ணம் போல் வாழ்கை "</p>
+    </header>
+    
+    <section id="about">
+        <img src="Aditya A cyber security (2).jpg" alt="Aditya's Photo" onclick="showPopup()">
+        <h2>About Me</h2>
+        <p>
+            Hey there! I’m Aditya A, an aspiring game developer 🎮 and cybersecurity enthusiast 🔐, currently pursuing my B.E. in CSE (Cyber Security) at SRM Madurai.
+
+I love exploring the world of programming 💻, ethical hacking 🛡, and game development 🎭. My journey is all about innovation, learning, and turning ideas into reality. Whether it’s building secure systems, crafting interactive games, or mastering creative tools, I always push myself to the next level.
+
+I believe in continuous growth 📈 and strive to make an impact with technology. Let’s build something extraordinary together! 🚀✨ 🚀</p>
+    </section>
+    
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <div class="skills-box">
+            <div class="skill"><img src="logo/Python.svg.png" alt="Python">Python</div>
+            <div class="skill"><img src="logo/htmlcss.jpg" alt="HTML & CSS">HTML & CSS</div>
+            <div class="skill"><img src="logo/windows.webp" alt="Windows">Windows</div>
+            <div class="skill"><img src="logo/cyber.jpg" alt="Cybersecurity">Cybersecurity Basics</div>
+            <div class="skill"><img src="logo/unity.png" alt="Unity">Unity Game Development</div>
+            <div class="skill"><img src="logo/canva.jpg" alt="Canvas">Canvas</div>
+            <div class="skill"><img src="logo/vs code.webp" alt="VS Code">VS Code</div>
+            <div class="skill"><img src="logo/picsart.jpg" alt="Picsart">Picsart</div>
+            <div class="skill"><img src="logo/photoshopp.webp" alt="Photoshop">Photoshop</div>
+            <div class="skill"><img src="logo/kinemaster.png" alt="Kinemaster">Kinemaster</div>
+            <div class="skill"><img src="logo/capcut.jpg" alt="CapCut">CapCut</div>
+        </div>
+    </section>
+
+
+    <section id="hackathon">
+        <h2>Hackathon Team 1</h2>
+        <div class="hackathon-box">
+            <div class="hackathon-team">
+                <img src="hackethon/aaa.png" alt="Team Logo">
+                <h3>Team Name: AAA Code Developers</h3>
+                <h3>Project Name: Fintech Security</h3>
+                <p><strong>Team Members:</strong></p>
+                <ul>
+                    <h4>Aditya A - Team Lead & Developer</h4>
+                    <h4>Akash N A - UI/UX Designer</h4>
+                    <h4>Anandharaj G - Backend Developer</h4>
+                    
+                </ul>
+                <p><a href="hackethon/AAA FINTECH .pdf" download>Download Project PDF</a></p>
+                <p><a href="https://aditya321x.github.io/fintech/" target="_blank">View Project</a></p>
+            </div>
+        </div>
+
+
+        <h2>Hackathon Team 2</h2>
+        <div class="hackathon-box">
+            <div class="hackathon-team">
+                <img src="hackethon/nexus logo.webp" alt="Team Logo">
+                <h3>Team Name: Nexus Networks</h3>
+                <h3>Project Name: Ai-Agriculture</h3>
+                <p><strong>Team Members:</strong></p>
+                <ul>
+                    <h4>Gowsick  - Team Lead & Developer</h4>
+                    <h4>Aditya A - web & Developer</h4>
+                    <h4>Akash N A - UI/UX Designer</h4>
+                    <h4>Anandharaj G - Backend Developer</h4>
+                    
+                </ul>
+                <p><a href="hackethon/NEXUS NETWORK.pptx" download>Download Project PDF</a></p>
+                <p><a href="https://aditya321x.github.io/agriculture_ai/" target="_blank">View Project</a></p>
+            </div>
+        </div>
+
+
+        
+    </section>
+    
+    <section id="certificates">
+        <h2>My Certificates</h2>
+        <p>Here are some of my certifications. Click to download:</p>
+        <div class="skills-box">
+            <div class="certificate">
+                <a href="certificate/energy.png" download>
+                    <img src="certificate/energy.png" alt="Certificate 1">
+                    <p>Energy Literacy</p>
+                </a>
+            </div>
+    
+            <div class="certificate">
+                <a href="certificate/hackz24.jpg" download>
+                    <img src="certificate/hackz24.jpg" alt="Certificate 2">
+                    <p>Hack"z 24</p>
+                </a>
+            </div>
+    
+            <div class="certificate">
+                <a href="certificate/k hack.jpg" download>
+                    <img src="certificate/k hack.jpg" alt="Certificate 3">
+                    <p>K Hackz</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-links">
+            <a href="https://wa.me/+91 8248082498"><img src="contact logo/whatsapp.png" alt="WhatsApp">WhatsApp</a>
+            <a href="mailto:adityaalex631@gmail.com"><img src="contact logo/email.png" alt="Email">Email</a>
+            <a href="https://www.instagram.com/mr_aditya_2k06?igsh=MXV3dDU4OGNhZmFoZw=="><img src="contact logo/instagram.jpg" alt="Instagram">Instagram</a>
+            <a href="https://facebook.com/your-facebook"><img src="contact logo/facebook.jpg" alt="Facebook">Facebook</a>
+            <a href="https://www.linkedin.com/in/aditya1465?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img src="contact logo/linked in.webp" alt="LinkedIn">LinkedIn</a>
+        </div>
+    </section>
+
+
+    <section id="feedback">
+        <h2>Feedback Form</h2>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdOElNMGuS8UTjHGeozg7bltS96010lrqqfIgRBX8ui47IzUg/viewform?usp=sf_link" width="100%" height="500px"></iframe>
+    </section>
+
+
+<div id="loginPopup" class="popup">
+    <h2>Enter Password</h2>
+    <input type="password" id="password" placeholder="Enter password">
+    <button onclick="checkPassword()">Submit</button>
+</div>
+
+</body>
+</html>
